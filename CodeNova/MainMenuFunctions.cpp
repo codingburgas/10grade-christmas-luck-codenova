@@ -1,57 +1,72 @@
 #include "GlobalFunctions.h"
-#include "MainMenuFunctions.h";
-#include <iostream>
-#include <string>
-#include <conio.h>
+#include "MainMenuFunctions.h"
+#include <sstream>
+#include "conio.h"
 using namespace std;
+stringstream output;
 
-void ChangeColor(HANDLE Output, int Color) {
-    SetConsoleTextAttribute(Output, Color);
+void ChangeColor(int Color) {
+    output << "\033[" << Color << "m";
 }
 
 void PrintMenuOption(const string& Option) {
     int padding = (getConsoleWidth() - 38) / 2;
-    cout << string(padding, ' ') << char(201) << string(36, char(205)) << char(187) << endl;
-    cout << string(padding, ' ') << char(186) << string(36, ' ') << char(186) << endl;
-    cout << string(padding, ' ') << char(186) << Option << char(186) << endl;
-    cout << string(padding, ' ') << char(186) << string(36, ' ') << char(186) << endl;
-    cout << string(padding, ' ') << char(200) << string(36, char(205)) << char(188) << "\n\n";
+    output << string(padding, ' ') << char(201) << string(36, char(205)) << char(187) << endl;
+    output << string(padding, ' ') << char(186) << string(36, ' ') << char(186) << endl;
+    output << string(padding, ' ') << char(186) << Option << char(186) << endl;
+    output << string(padding, ' ') << char(186) << string(36, ' ') << char(186) << endl;
+    output << string(padding, ' ') << char(200) << string(36, char(205)) << char(188) << "\n\n";
 }
 
-void ShowMenu() {
+MENU ShowMenu() {
     string MenuOptions[3] = {
         "         Generate Sequences         ",
         "          Sort Sequences            ",
         "               Exit                 "
     };
 
-    bool timetochoose = true;
-    bool firstTimeRun = true;
     int SelectedGame = 0;
+    char key = 0;
 
-    while (timetochoose) {
-        if (firstTimeRun) {
-            FullScreen();
-            firstTimeRun = false;
+    while (true) {
+        output.str("");
+
+        switch (key)
+        {
+        case(72): //up arrow key
+            SelectedGame--;
+            if (SelectedGame < 0) SelectedGame = 2;
+            break;
+
+        case(80): //Down arrow key
+            SelectedGame++;
+            if (SelectedGame >= 3) SelectedGame = 0;
+            break;
+
+        case(13): // Enter key
+            if (SelectedGame == 0) {
+                return GENERATESEQUENCES;
+            }
+            else if (SelectedGame == 1) {
+                return SORTSEQUENCES;
+            }
+            else if (SelectedGame == 2) {
+                return EXIT;
+            }
+            break;
         }
-        system("cls");
+
         for (int i = 0; i < 3; i++) {
             if (i == SelectedGame) {
-                ChangeColor(GetStdHandle(STD_OUTPUT_HANDLE), 11);
+                ChangeColor(36);
             }
             PrintMenuOption(MenuOptions[i]);
-            ChangeColor(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+            ChangeColor(37);
         }
 
-        char key = _getch();
-        if (key == 72) { // Up arrow key
-            SelectedGame = (SelectedGame - 1 + 3) % 3;
-        }
-        else if (key == 80) { // Down arrow key
-            SelectedGame = (SelectedGame + 1) % 3;
-        }
-        else if (key == 13) { // Enter key
-            timetochoose = false; // Exit loop for now (functionality TBD)
-        }
+
+        cout << output.str();
+        SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), { 0, 0 });
+        key = _getch();
     }
 }

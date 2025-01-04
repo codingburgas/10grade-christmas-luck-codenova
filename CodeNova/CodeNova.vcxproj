@@ -128,12 +128,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CodeNova.cpp" />
+    <ClCompile Include="FilterSequences.cpp" />
+    <ClCompile Include="GenerateSequences.cpp" />
+    <ClCompile Include="SequenceFunctions.cpp" />
     <ClCompile Include="GobalFunctions.cpp" />
     <ClCompile Include="MainMenuFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FilterSequences.h" />
+    <ClInclude Include="GenerateSequences.h" />
     <ClInclude Include="GlobalFunctions.h" />
     <ClInclude Include="MainMenuFunctions.h" />
+    <ClInclude Include="SequenceFunctions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

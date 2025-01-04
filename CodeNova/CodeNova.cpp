@@ -1,11 +1,24 @@
 #include <iostream>
 #include <string>
-#include <Windows.h>
-#include <conio.h>
+#include <vector>
 #include "GlobalFunctions.h"
 #include "MainMenuFunctions.h"
+#include "GenerateSequences.h"
+#include "FilterSequences.h"
 using namespace std;
 
 int main() {
-    ShowMenu();
+    FullScreen();
+    Sleep(200);
+    MENU choice;
+    while ((choice = ShowMenu()) != EXIT) {
+        clear();
+        if (choice == GENERATESEQUENCES) {
+            GenerateSequences(sequences);
+        }
+        else if (choice == SORTSEQUENCES) {
+            FilterSequences();
+        }
+    }
+    return 0;
 }

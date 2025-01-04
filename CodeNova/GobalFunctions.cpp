@@ -1,11 +1,31 @@
 #include "GlobalFunctions.h"
 #include <iostream>
 #include <string>
-#include <Windows.h>
+#include <vector>
+#include <algorithm>
+#include "Windows.h"
 using namespace std;
+
+vector<string> sequences;
+
+void clear() {
+#ifdef _WIN32
+    system("cls"); //Windows-specific clear
+#elif __linux__ || __APPLE__
+    system("clear"); //Linux and macOS-specific clear
+#endif
+}
+
+void formatString(string& input) {
+    input.erase(remove(input.begin(), input.end(), ' '), input.end());
+    transform(input.begin(), input.end(), input.begin(), ::tolower);
+}
 
 int getConsoleWidth() {
     CONSOLE_SCREEN_BUFFER_INFO csbi;
+    if (!GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi)) {
+        return 160; //Return a default value if the function fails
+    }
     GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
     return csbi.srWindow.Right - csbi.srWindow.Left + 1;
 }
@@ -19,6 +39,10 @@ void FullScreen() { // This function is used to fullscreen the program. The cent
 
 void centerText(const string& text) {
     int consoleWidth = getConsoleWidth();
-    int paddingLeft = max((consoleWidth - text.length()) / 2, 0);
+    if (consoleWidth <= 0) {
+        consoleWidth = 160; //Fall back to the default width
+    }
+
+    int paddingLeft = max((consoleWidth - (int)text.length()) / 2, 0);
     cout << string(paddingLeft, ' ') << text;
 }
