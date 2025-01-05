@@ -8,6 +8,8 @@ using namespace std;
 
 vector<string> sequences;
 
+extern bool fullScreenActivated = false;
+
 vector<string> menuBanner = {  //ASCII art
 "  __  __       _         __  __                  ",
 " |  \\/  |     (_)       |  \\/  |                 ",
@@ -81,6 +83,10 @@ void FullScreen() {  //This function is used to fullscreen the program. The cent
     keybd_event(VK_RETURN, 0x1c, 0, 0);  //It works by making keyboard inputs for the user
     keybd_event(VK_RETURN, 0x1c, KEYEVENTF_KEYUP, 0);
     keybd_event(VK_MENU, 0x38, KEYEVENTF_KEYUP, 0);
+
+    if (fullScreenActivated == false) {
+        fullScreenActivated = true;
+    }
 }
 
 void centerText(const string& text) {

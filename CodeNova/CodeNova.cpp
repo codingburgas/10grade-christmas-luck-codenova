@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
     FullScreen();
-    Sleep(200);  //This is essential because the program may print out the main menu before putting the window in fullscreen on some devices and the CenterText() function does not adapt in real time. The value inside the brackets is in miliseconds
+    Sleep(500);  //This is essential because the program may print out the main menu before putting the window in fullscreen on some devices and the CenterText() function does not adapt in real time. The value inside the brackets is in miliseconds
     MENU choice;  //MENU is an enum type, declared in MainMenuFunctions.h, and it's also the return type of the ShowMenu() function
     while ((choice = ShowMenu()) != EXIT) {
         clear();
