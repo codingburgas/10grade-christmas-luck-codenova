@@ -10,18 +10,20 @@ using namespace std;
 
 // GLOBAL VARIABLES
 
-map<string, vector<string>> traitsDNA{         //trait-specific codons for each of the sequence types
+map<string, vector<string>> traitsDNA{         // trait-specific codons for each of the sequence types
     {"blackhair", {"GGG", "AGC", "ATT"}},
     {"brownhair", {"ATC", "AAA", "AGG"}},
     {"blueeyes", {"TTT", "ACC", "TCG"}},
-    {"browneyes", {"GTA", "AGT", "CCC"}}
+    {"browneyes", {"GTA", "AGT", "CCC"}},
+    {"freckles", {"CGA", "TGC", "AAT"}}
 };
 
 map<string, vector<string>> traitsRNA{
     {"blackhair", {"GGG", "AGC", "AUU"}},
     {"brownhair", {"AUC", "AAA", "AGG"}},
     {"blueeyes", {"UUU", "ACC", "UCG"}},
-    {"browneyes", {"GUA", "AGU", "CCC"}}
+    {"browneyes", {"GUA", "AGU", "CCC"}},
+    {"freckles", {"CGA", "UGC", "AAU"}}
 };
 
 // FUNCTIONS

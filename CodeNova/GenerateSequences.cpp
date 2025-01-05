@@ -39,6 +39,10 @@ void GenerateSequences(vector<string>& sequences) {
             centerText("Invalid input\n\n");
             continue;
         }
+        if (traits.find("freckles") != string::npos && traits.substr(traits.find("freckles") + 4).find("freckles") != string::npos) {
+            centerText("Invalid input\n\n");
+            continue;
+        }
 
         string sequence = generateSequenceByTrait(traits, sequenceType);
         if (sequence == "invalidinput") {
