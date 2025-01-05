@@ -1,14 +1,20 @@
 #pragma once
 #include <iostream>
-#include <string>
 #include "Windows.h"
+#include <string>
+
+extern std::string MenuOptions[4];
+
+extern bool displaySequenceTraits;
+
 enum MENU {
     GENERATESEQUENCES,
     SORTSEQUENCES,
+    DISPLAYSEQUENCETRAITS,
     EXIT
 };
 
-void ChangeColor(HANDLE Output, int Color);
+void ChangeColor(int Color);
 
 void PrintMenuOption(const std::string& Option);
 
