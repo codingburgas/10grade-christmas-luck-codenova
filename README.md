@@ -1,7 +1,7 @@
 <h1 align="center">CodeNova</h1>
 
 <p align = "center">
-  <img src="README images/CodeNovaLogo.webp" alt="CodeNova's logo" width=100px height=100px/>
+  <img src="README images/CodeNovaLogo.webp" alt="CodeNova's logo" width=250px height=250px/>
 </p>
 
 <br>
@@ -14,7 +14,7 @@
 
 ## 🚀 Languages 
   <p align="left"> 
-  <a href="https://www.cplusplus.com/"><img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++"/></a>
+  <a href="https://www.cplusplus.com/"><img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" width=48px height=48px alt="C++"/></a>
  
   </p>
 
@@ -23,7 +23,7 @@
   <a href="https://visualstudio.microsoft.com/"><img src="README images/Visual-Studio.png" alt="Visual Studio 2022" width=48px height=48px/></a>
     <a href="https://www.microsoft.com/en-ww/microsoft-365/word"><img src="README images/Microsoft_Office_Word_(2019–present).svg.png" alt="MS Word logo" width=48px height=48px /></a>
     <a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint"><img src="README images/Power-Point-logo.png" alt="MS PowerPoint logo" width=48px height=48px />
-    <a href="https://git-scm.com/"><img src="README images/Git-Icon-Black.png" alt="Git"/></a>
+    <a href="https://git-scm.com/"><img src="README images/Git-Icon-Black.png" width=48px height=48px alt="Git"/></a>
     <a href="https://www.adobe.com/bg/"><img src="README images/Adobe_Illustrator_CC_icon.png" width=48px height=48px alt="Adobe Illustrator">
     <a href="https://www.adobe.com/bg/"><img src="README images/1200px-Adobe_Photoshop_Mobile_icon.png" width=48px height=48px alt="Adobe Photoshop">
       <a href="https://git-scm.com/"><img src="README images/GitHub-Mark.png" alt="GitHub" heigh=48px width=48px/></a>
