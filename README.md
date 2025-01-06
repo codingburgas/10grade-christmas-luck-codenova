@@ -28,7 +28,10 @@
   
 ## 💼 Documents
   
-
+<ul>
+    <li><a href="documentation/CodeNovaDocumentation.docx">Documentation</a></li>
+    <li><a href="documentation/CodeNovaPresentation.pptx">Presentation</a></li>
+   </ul>
 
 ## 🔧 Installation
 
@@ -47,9 +50,9 @@ git clone https://github.com/codingburgas/10grade-christmas-luck-codenova.git
 ```
 
 ## 🖥 Team Members
-* **Gabriel Yanchev** - *Scrum trainer* 
-* **Cvetomir Stoilov** - *Back-end developer* 
+* **Gabriel Yanchev** - *Scrum Master*
 * **Zlatin Lazarov** - *Back-end developer*
+* **Cvetomir Stoilov** - *Front-end developer* 
 
 
  
