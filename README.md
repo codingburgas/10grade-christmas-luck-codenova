@@ -17,7 +17,7 @@
 
 ## 🔧 Tools 
   <p align="left"> 
-  <a href="https://visualstudio.microsoft.com/"><img src="README images/Visual-Studio.png" alt="Visual Studio 2022" width=48px height=48px/></a>
+  <a href="https://visualstudio.microsoft.com/"><img src="README images/Visual-Studio.png" alt="Visual Studio 2022" width=60px height=60px/></a>
     <a href="https://www.microsoft.com/en-ww/microsoft-365/word"><img src="README images/Microsoft_Office_Word_(2019–present).svg.png" alt="MS Word logo" width=48px height=48px /></a>
     <a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint"><img src="README images/Power-Point-logo.png" alt="MS PowerPoint logo" width=48px height=48px />
     <a href="https://git-scm.com/"><img src="README images/Git-Icon-Black.png" width=48px height=48px alt="Git"/></a>
