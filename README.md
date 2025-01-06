@@ -4,9 +4,6 @@
   <img src="README images/CodeNovaLogo.webp" alt="CodeNova's logo" width=250px height=250px/>
 </p>
 
-<br>
-
-
 
 ## 📋 Description
   CodeNova is a cutting-edge project designed to create and sort genetic sequences based on user-defined traits. It allows users to specify desired characteristics, and the tool intelligently generates plausible DNA/RNA sequences corresponding to those traits.
