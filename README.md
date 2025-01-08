@@ -50,8 +50,8 @@ git clone https://github.com/codingburgas/10grade-christmas-luck-codenova.git
 ```
 
 ## 🖥 Team Members
-* **Gabriel Yanchev** - *Scrum Master*
-* **Zlatin Lazarov** - *Back-end developer*
+* **Zlatin Lazarov** - *Scrum Master*
+* **Gabriel Yanchev** - *Back-end developer*
 * **Cvetomir Stoilov** - *Front-end developer* 
 
 
