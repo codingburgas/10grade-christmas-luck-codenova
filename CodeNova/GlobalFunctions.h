@@ -5,8 +5,6 @@
 
 extern std::vector<std::string> sequences;
 
-extern bool fullScreenActivated;
-
 extern std::vector<std::string> menuBanner;
 
 extern std::vector<std::string> generateBanner;
